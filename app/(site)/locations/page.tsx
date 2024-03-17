@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Heading from '@/components/Utils/Heading'
 
-let level: number = 1;
+let level: number = 1
 
 export default function Locations() {
     return (
@@ -93,5 +93,5 @@ export default function Locations() {
                 </li>
             </ul>
         </main>
-    );
+    )
 }

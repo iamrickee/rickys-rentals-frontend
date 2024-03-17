@@ -2,25 +2,25 @@
 
 import Heading from '@/components/Utils/Heading'
 
-export default function Contact() {
+export default function Reserve() {
     return (
         <main className="container py-6">
             <Heading text="Reserve a Rental" level={1} />
             <form action="/reserve/submit">
                 <div className="columns-1 sm:columns-2">
                     <div className="w-full mb-7 align-top">
-                        <input name="first_name" placeholder="First Name*" className="w-full py-2 px-4 text-lg" required />
+                        <input type="text" name="first_name" placeholder="First Name*" className="w-full py-2 px-4 text-lg" required />
                     </div>
                     <div className="w-full mb-7 align-top">
-                        <input name="last_name" placeholder="Last Name*" className="w-full py-2 px-4 text-lg" required />
+                        <input type="text" name="last_name" placeholder="Last Name*" className="w-full py-2 px-4 text-lg" required />
                     </div>
                 </div>
                 <div className="columns-1 sm:columns-2">
                     <div className="w-full mb-7 align-top">
-                        <input name="email" placeholder="Email*" className="w-full py-2 px-4 text-lg" required />
+                        <input type="email" name="email" placeholder="Email*" className="w-full py-2 px-4 text-lg" required />
                     </div>
                     <div className="w-full mb-7 align-top">
-                        <input name="phone" placeholder="Phone" className="w-full py-2 px-4 text-lg" />
+                        <input type="tel" name="phone" placeholder="Phone" className="w-full py-2 px-4 text-lg" />
                     </div>
                 </div>
                 <div className="columns-1 sm:columns-2">
@@ -47,5 +47,5 @@ export default function Contact() {
                 </div>
             </form>
         </main>
-    );
+    )
 }

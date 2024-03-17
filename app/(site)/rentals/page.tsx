@@ -37,5 +37,5 @@ export default function Rentals() {
         </div>
         <small className="container block text-right"><a href='https://pngtree.com/freepng/set-of-construction-equipment-in-yellow-special-machines-for-the-building-work_4843143.html' target="_blank">png image from pngtree.com/</a></small>
     </main>
-  );
+  )
 }
