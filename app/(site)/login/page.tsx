@@ -1,14 +1,24 @@
 'use client'
 
+import { useEffect } from 'react'
+import { toast } from 'sonner'
 import { login } from '@/actions/auth/auth'
 import Heading from '@/components/Utils/Heading'
 
 export default function Login() {
 
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        console.log("errorx",error)
+        if (error != "" && error !== undefined) {
+            toast.error(error, {position:'top-center'})
+        }
+    })
     return (
         <main className="container py-6">
             <Heading text="Admin Login" level={1} />
-            <form action={login} method="POST" className="max-w-[480px] mx-auto mt-12">
+            <form action={login} className="max-w-[480px] mx-auto mt-12">
                 <div className="columns-1">
                     <div className="w-full mb-7 align-top">
                         <input type="text" name="username" placeholder="Username" className="w-full py-2 px-4 text-lg" required />
